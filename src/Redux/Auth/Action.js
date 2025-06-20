@@ -7,7 +7,7 @@ import { API_BASE_URL } from "@/config/api";
 export const register = userData => async (dispatch) => {
     dispatch({ type: REGISTER_REQUEST });
     try {
-        const { data } = await axios.post(`https://project-management-system-with-spring-301x.onrender.com/auth/signup`, userData);
+        const { data } = await axios.post(`https://project-management-system-with-spring-7svx.onrender.com/auth/signup`, userData);
         console.log("REGISTER payload:", userData);
         console.log("REGISTER response:", data);
         
