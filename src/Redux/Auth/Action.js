@@ -31,7 +31,7 @@ export const register = userData => async (dispatch) => {
 export const getUser =()=>async(dispatch)=>{
     dispatch({type:GET_USER_REQUEST})
     try{
-        const {data} = await axios.get(`http://localhost:5454/api/users/profile`, {
+        const {data} = await axios.get(`https://project-management-system-with-spring-7svx.onrender.com/api/users/profile`, {
             headers:{
                 "Authorization": `Bearer ${localStorage.getItem("jwt")}`,
             },
@@ -51,7 +51,7 @@ export const getUser =()=>async(dispatch)=>{
 export const login = userData => async (dispatch) => {
     dispatch({ type: LOGIN_REQUEST });
     try {
-        const { data } = await axios.post(`http://localhost:5454/auth/signing`, userData);
+        const { data } = await axios.post(`https://project-management-system-with-spring-7svx.onrender.com/auth/signing`, userData);
         console.log("Login payload:", userData);
         console.log("Login response:", data);
         
